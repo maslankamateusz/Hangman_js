@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisielec</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Wisielec</h1>
+    <p>Zgadnij słowo wpisując litery</p>
+    <div class="game-container" id="game-container">
+      <div class="only-body-container">
+        <svg height="250" width="200" class="body-container-svg">
+          <line x1="60" y1="5" x2="140" y2="5" />
+          <line x1="140" y1="5" x2="140" y2="50" />
+          <line x1="60" y1="5" x2="60" y2="230" />
+          <line x1="20" y1="230" x2="135" y2="230" />
+
+          <circle cx="140" cy="70" r="20" class="body-part" />
+          <line x1="140" y1="90" x2="140" y2="150" class="body-part" />
+          <line x1="140" y1="120" x2="120" y2="100" class="body-part" />
+          <line x1="140" y1="120" x2="160" y2="100" class="body-part" />
+          <line x1="140" y1="150" x2="120" y2="180" class="body-part" />
+          <line x1="140" y1="150" x2="160" y2="180" class="body-part" />
+        </svg>
+      </div>
+      <div class="info-container">
+        <div class="wrong-letters-container">
+          <div id="wrong-letters">&nbsp;</div>
+        </div>
+
+        <div class="input-container">
+          <h1>Podaj literę:</h1>
+          <input id="myInput" class="myInput" type="text"oninput="inputFunction()"onkeyup="inputClear()"autofocus="autofocus"/>
+        </div>
+      </div>
+      <div class="password-container">
+        <div class="wordTitle">Hasło:</div>
+        <div class="word" id="word"></div>
+      </div>
+    </div>
+
+    <div class="popup-container popupContainerOpacityNone" id="popup-container">
+      <div class="popup" id="popup">
+        <div class="popup2">
+          <h2 id="final-message">Przgrałeś</h2>
+          <button id="play-button">Zagraj ponownie</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification-container" id="notification-container">
+      <p>Wpisywałeś już tą litere</p>
+    </div>
+    <div
+      class="notification-container-wrong-letter"
+      id="notification-container-wrong-letter"
+    >
+      <p>Niepoprawna litera</p>
+    </div>
+
+    <div class="choseLevelContainer" id="choseLevelContainer">
+      <div class="choseLevelHeader">
+        <h2>Wybierz stopień trudności</h2>
+      </div>
+      <div class="choseLevelButtoms">
+        <button class="levelButtoms" id="easyLevel" onclick="easyLevel()">Łatwy</button>
+        <button class="levelButtoms" id="mediumLevel" onclick="mediumLevel()">Średni</button>
+        <button class="levelButtoms" id="hardLevel" onclick="hardLevel()">Trudny</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
