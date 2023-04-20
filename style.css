@@ -150,7 +150,7 @@ h1 {
 .popup,
 .popup-move,
 .popup-move2 {
-  width: 15vw;
+  width: 25vw;
   height: 15vh;
   display: flex;
   justify-content: center;
@@ -159,11 +159,11 @@ h1 {
   top: 42.5vh;
 }
 .popup {
-  left: -15vw;
+  left: -25vw;
   transition: 0.5s;
 }
 .popup-move {
-  left: 42.5vw;
+  left: 37.5vw;
   transition: 2.5s;
 }
 .popup-move2 {
@@ -180,6 +180,8 @@ h1 {
   margin-right: 5px;
   padding: 12px 20px;
   font-size: 16px;
+  transition: .8s;
+  border: 1px solid;
 }
 .popup2 {
   background-color: #13232cbe;
@@ -203,6 +205,11 @@ h1 {
 
 .popupContainerOpacityFull {
   opacity: 1;
+}
+
+#final-message{
+  padding-bottom: 5%;
+  font-size: 32px;
 }
 .choseLevelContainer {
   display: none;
@@ -245,12 +252,14 @@ h1 {
   border-radius: 1px;
   transition: .8s;
 }
-.choseLevelButtoms button:hover{
+.choseLevelButtoms button:hover,
+.playAgainChoseLevelButtoms button:hover{
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid;
   border-color: #519bc3;
+  
 }
 
 /*

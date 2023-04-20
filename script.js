@@ -3,6 +3,9 @@ const gameContainer = document.getElementById("game-container");
 const word = document.getElementById("word");
 const wrongLettersE1 = document.getElementById("wrong-letters");
 const playAgainBtn = document.getElementById("play-button");
+const playAgainEasyLevelBtn = document.getElementById("play-button-level-easy");
+const playAgainMediumLevelBtn = document.getElementById("play-button-level-medium");
+const playAgainHardLevelBtn = document.getElementById("play-button-level-hard");
 const popup = document.getElementById("popup");
 const popupContainer = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
@@ -209,7 +212,8 @@ function inputClear() {
 }
 
 //zagraj ponownie
-playAgainBtn.addEventListener("click", () => {
+//playAgainBtn.addEventListener("click", () => {
+  /*
   popup.classList.remove("popup-move");
   popup.classList.add("popup-move2");
 
@@ -227,7 +231,86 @@ playAgainBtn.addEventListener("click", () => {
   }, 3380);
 
   updateWrongLetterE1();
+  */
+//});
+
+
+
+//zagraj ponownie poziom łatwy
+
+playAgainEasyLevelBtn.addEventListener("click", () =>{
+  
+  popup.classList.remove("popup-move");
+  popup.classList.add("popup-move2");
+
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
+
+  displayEasyWord();
+
+  setTimeout(function popupPlace() {
+    gameContainer.style.opacity = "1";
+    popup.classList.remove("popup-move2");
+    popup.classList.add("popup");
+
+    popupContainer.classList.remove("popupContainerOpacityFull");
+    popupContainer.classList.add("popupContainerOpacityNone");
+  }, 3380);
+
+  updateWrongLetterE1();
 });
+
+//zagraj ponownie poziom średni
+
+playAgainMediumLevelBtn.addEventListener("click", () =>{
+  
+  popup.classList.remove("popup-move");
+  popup.classList.add("popup-move2");
+
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
+
+  displayMediumWord();
+
+  setTimeout(function popupPlace() {
+    gameContainer.style.opacity = "1";
+    popup.classList.remove("popup-move2");
+    popup.classList.add("popup");
+
+    popupContainer.classList.remove("popupContainerOpacityFull");
+    popupContainer.classList.add("popupContainerOpacityNone");
+  }, 3380);
+
+  updateWrongLetterE1();
+});
+
+//zagraj ponownie poziom trudny
+
+playAgainHardLevelBtn.addEventListener("click", () =>{
+  
+  popup.classList.remove("popup-move");
+  popup.classList.add("popup-move2");
+
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
+
+  displayHardWord();
+
+  setTimeout(function popupPlace() {
+    gameContainer.style.opacity = "1";
+    popup.classList.remove("popup-move2");
+    popup.classList.add("popup");
+
+    popupContainer.classList.remove("popupContainerOpacityFull");
+    popupContainer.classList.add("popupContainerOpacityNone");
+  }, 3380);
+
+  updateWrongLetterE1();
+});
+
+
+
+
 let x
 function openGame(){
   console.log("otwarcie");
